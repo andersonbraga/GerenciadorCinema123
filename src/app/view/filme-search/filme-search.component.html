@@ -1,0 +1,28 @@
+<div class="container">
+  <!-- <h6>Pesquisar Filmes</h6>
+  <div class="custom-search">
+    <input type="text" [(ngModel)]="termoPesquisa" placeholder="Digite o termo de pesquisa" />
+    <button class="btn btn-primary" (click)=" pesquisar()">Pesquisar</button>
+  </div> -->
+  <div class="search-header">
+    <h6>Pesquisar Filmes</h6>
+    <div class="custom-search">
+      <input type="text" [(ngModel)]="termoPesquisa" placeholder="Digite o termo de pesquisa" />
+      <button class="btn btn-primary" (click)="pesquisar()">Pesquisar</button>
+    </div>
+  </div>
+
+
+  <div class="row ">
+    <div class="col-md-4 " *ngFor="let filme of resultados">
+      <div class="card " routerLink="/view/filmedetalhe/{{ filme.id }}" class="card-container">
+        <img class="card-img-top" [src]="filme.posterUrl" alt="{{ filme.nomePt }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ filme.nomePt }}</h5>
+          <p class="card-text">{{ filme.sinopse }}</p>
+          <a [routerLink]="'/view/filmedetalhe/' + filme.id" *ngIf="filme.sinopse.length > 100">Leia mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

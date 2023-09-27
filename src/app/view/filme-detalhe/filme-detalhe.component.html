@@ -1,0 +1,58 @@
+<div class="container d-grip gap-3 y-4">
+
+  <div class="row gap-3">
+    <button (click)="toggleFavorito(filme)" class="custom-favorito-button">
+      <i [ngClass]="{'bi bi-star-fill': favorito, 'bi bi-star': !favorito}"></i>
+      {{ favorito ? 'Remover dos Favoritos' : 'Adicionar aos Favoritos' }}
+    </button>
+
+
+
+
+
+    <div class="col-lg-12">
+      <div class="d-flex gap-5">
+        <div [ngStyle]="{backgroundImage:'url('+ filme.posterUrl +')'}" routerLink="/view/filmedetalhe/{{ filme.id }}" (mouseover)="show = true" (mouseout)="show = false" [ngClass]="show ? 'bigger' : 'normal'" class="card-container">
+          <h4 [ngClass]="show ? 'show-card' : 'hidden-card'" class="titulo">{{ filme.nomePt }}</h4>
+        </div>
+
+
+
+        <div class="trailer-container">
+          <iframe [src]="filme.trailerUrl" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-9">
+      <div class="film-description">
+        <h5 class="mt-3 text-dark" id="sinopse">{{ filme.sinopse }}</h5>
+      </div>
+
+    </div>
+    <div class="col-lg-9">
+      <div class="d-flex flex-wrap genre-list gap-3">
+        <div class="mb-2">
+          <h6 class="font-weight-bold bi bi-film"> {{filme.diretor}}</h6>
+        </div>
+        <div *ngFor="let genero of filme.generos" class="mb-2">
+          <span class="badge rounded-pill badge-genre">
+            <i class="bi bi-tag"></i> {{ genero }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-9">
+      <div class="d-flex flex-wrap elenco-list gap-3">
+        <div *ngFor="let ator of filme.elenco.slice(0, 5)" class="mb-2">
+          <div class="d-flex align-items-center">
+            <img [src]="ator.foto" alt="{{ ator.nome }}" class="ator-foto rounded-circle">
+            <span class="badge rounded-pill badge-elenco">
+              <i class="bi bi-person"></i> {{ ator.nome }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

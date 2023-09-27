@@ -1,0 +1,13 @@
+<!-- <div class="col-6 col-md-4 col-lg-6 mb-4">
+  <div class="d-grid gap-1 text-center">
+
+    <img class="img-fluid rounded-3 border border-2 border-danger" id="poster" src={{filme.posterUrl}}>
+    <a class="fs-6 link-danger text-decoration-none" id="titulo">{{filme.nomePt}}</a>
+ 
+  </div>
+</div> -->
+
+
+<div [ngStyle]="{backgroundImage:'url('+ filme.posterUrl +')'}" routerLink="/view/filmedetalhe/{{ filme.id }}" (mouseover)="show = true" (mouseout)="show = false" [ngClass]="show ? 'bigger' : 'normal'" class="card-container">
+  <h4 [ngClass]="show ? 'show-card' : 'hidden-card'" class="titulo">{{ filme.nomePt }}</h4>
+</div>

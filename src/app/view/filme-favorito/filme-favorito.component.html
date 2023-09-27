@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-lg-4" *ngFor="let filme of filmesFavoritos">
+    <div class="card-container" routerLink="/view/filmedetalhe/{{ filme.id }}">
+      <div class="card-body d-flex flex-column justify-content-center align-items-center">
+        <img [src]="filme.posterUrl" alt="{{ filme.nomePt }}" class="card-img-top">
+        <h5 class="card-title">{{ filme.nomePt }}</h5>
+        <p class="card-text">{{ filme.sinopse }}</p>
+        <button class="custom-favorito-button" (click)="removerDosFavoritos(filme)">Remover dos Favoritos</button>
+      </div>
+    </div>
+  </div>
+</div>

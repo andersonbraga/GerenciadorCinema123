@@ -1,0 +1,228 @@
+.genre-list .badge-genre {
+  background-color: #ffc107;
+  color: white;
+  margin-right: 5px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.custom-favorito-button {
+  background-color: #f8f9fa; 
+  color: #007bff; 
+  border: 1px solid #007bff; 
+  padding: 8px 16px; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  height: 40px;
+  width: 250px;
+}
+
+.custom-favorito-button:hover {
+  background-color: #007bff; /* Cor de fundo do botão ao passar o mouse */
+  color: #fff; /* Cor do texto do botão ao passar o mouse */
+}
+
+.ator-foto {
+  width: 55px;
+  height: 55px; /* Reduzi um pouco a altura para um aspecto mais uniforme */
+  align-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aumentei a opacidade da sombra */
+  border-radius: 50%; /* Para criar imagens redondas */
+}
+
+.trailer-container {
+  width: 100%;
+  max-width: 800px; /* Limite a largura máxima para evitar que o vídeo fique muito grande */
+  height: auto; /* Altura automática para manter a proporção do vídeo */
+  overflow: hidden; /* Oculta qualquer parte do vídeo que exceda o contêiner */
+}
+
+.trailer-container iframe {
+  width: 100%;
+  height: 100%; /* Ocupa 100% da altura disponível */
+  border: none;
+}
+
+.ator-foto:hover {
+  transform: scale(1.1); /* Aumentar um pouco no hover */
+}
+
+
+.elenco-list .badge-elenco {
+  background-color: #333;
+  color: white; 
+  margin-right: 5px; 
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.elenco-list .badge-elenco:hover {
+  transform: scale(1.1); 
+}
+
+.badge-custom {
+  
+  color: #333;
+  border-radius: 20px; 
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.genre-list .badge-genre:hover {
+  transform: scale(1.1); 
+  
+  
+}
+
+.genre-list {
+  margin-top: 20px;
+}
+
+.genre-list h6 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#sinopse {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  text-align: justify;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+
+
+
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.container h2 {
+  margin: 40px 0px;
+}
+
+p {
+  text-align: start;
+  max-width: 600px;
+  width: 100%;
+  margin: 0px 50px 100px 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  margin: 40px;
+}
+
+.accordion {
+  margin: 0px 70px;
+}
+
+.card-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   position: relative; 
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.7s ease-in-out;
+  
+  
+}
+
+.bigger {
+  transform: scale(1.2);
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+
+.show-card {
+  border-radius: 30px;
+  display: flex;
+  z-index: 200;
+  position: absolute;
+  font-size: 20px;
+  padding: 15px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(12, 12, 12, 0.5), rgba(0, 0, 0));
+  border: 1px solid rgba(12, 12, 12, 0.5);
+  width: 100%;
+  height: 100%;
+  letter-spacing: 1px;
+ 
+}
+
+.hidden-card {
+  display: none
+
+}
+
+  /* .card {
+     height: 800px;
+     width: 300px;
+     background-color: rgb(33, 33, 33);
+     cursor: pointer;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 30px;
+     color: white;
+     border: none;
+  }
+
+   .card h4 {
+     margin: 20px 0px;
+     font-size: 19px;
+     text-align: center;
+   }
+   .card p {
+     font-size: 14px;
+ } */
+
+ .film-description {
+  margin-top: 20px;
+  
+}
+
+.film-description h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  
+}
+
+.film-description p {
+  font-size: 16px;
+  line-height: 1.5;
+}

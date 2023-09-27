@@ -1,0 +1,15 @@
+<div class="row g-3">
+
+  <!-- Paginação -->
+  <div class=" d-flex flex-column justify-content-center align-items-center">
+    <ngb-pagination [(page)]="paginaAtual" [pageSize]="filmesPorPagina" [collectionSize]="totalFilmes" (pageChange)='irParaPagina($event)'>
+    </ngb-pagination>
+
+  </div>
+
+
+  <div *ngFor="let filme of filmes" class="col-sm col-md-6 col-lg-3">
+    <app-card-filme [filme]="filme"></app-card-filme>
+  </div>
+
+</div>

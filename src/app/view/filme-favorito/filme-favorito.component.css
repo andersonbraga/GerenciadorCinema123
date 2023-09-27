@@ -1,0 +1,49 @@
+.card-container {
+  width: 50%; 
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 40px; 
+  cursor: pointer;
+}
+
+
+
+.card-container:hover{
+  transform: scale(1.1);
+}
+
+.card-img-top{
+  border-radius: 50px;
+  border-bottom-left-radius: 10px;
+  
+}
+
+.card-img-top:hover{
+  cursor: pointer;
+  
+  
+}
+
+.card-text{
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.custom-favorito-button {
+  background-color: #f8f9fa;
+  color: red;
+  border: 1px solid red;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.custom-favorito-button:hover {
+  background-color: red;
+  color: #fff;
+}
